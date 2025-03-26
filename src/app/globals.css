@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .ios-btn {
+    @apply rounded-xl bg-blue-500 text-white font-medium px-5 py-2.5 
+    transition-all active:scale-95 active:bg-blue-600 focus:outline-none;
+  }
+  
+  .ios-card {
+    @apply bg-white rounded-2xl p-4 shadow-md;
+  }
+
+  .ios-input {
+    @apply rounded-lg border border-gray-300 px-3 py-2 focus:outline-none 
+    focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+} 
